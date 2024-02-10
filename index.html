@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="searchbar">
+        <h1>Movies for You</h1>
+        <span>The best MovieDB</span>
+        <form action="">
+          <input type="text" name="search" id="search-movie" placeholder="Movie title" />
+          <input type="button" value="Search" onclick="showFilteredByTextInput()" class="searchButton" />
+          <div class="search">
+            <input type="button" name="criteria" value="Year Up" class="thinButton" onclick="showSortedByYearUp()" />
+
+            <input type="button" name="criteria" value="Year Down" class="thinButton" onclick="showSortedByYearDown()" />
+
+            <input type="button" name="criteria" value="Best Rating" class="thinButton" onclick="showAllMoviesSortedByRating()" />
+          </div>
+          <input type="text" name="category" id="search-category" placeholder="Fantasy, Drama , Comedy, Romance, Sci-Fi ..." />
+          <input type="button" value="Filter Genre" onclick="showFilteredByTextInput()" class="searchButton" />
+        </form>
+      </section>
+      <section class="movies-section">
+        <!-- hier werden die einzelnen Filme befüllt-->
+        <article class="movies"></article>
+      </section>
+      <script src="./assets/main.js"></script>
+    </main>
+  </body>
+</html>
